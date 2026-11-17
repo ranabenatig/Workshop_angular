@@ -1,0 +1,26 @@
+
+<div class="notifications">
+
+  <h3>🔔 Zone de notifications</h3>
+
+  <p>Vous avez {{ notifications.length }} nouvelles notifications.</p>
+
+  <button (click)="afficherNotifications()">
+    {{ showNotifications ? 'Masquer les notifications' : 'Afficher les notifications' }}
+  </button>
+
+  @if (showNotifications) {
+
+    <div class="notification-list">
+
+      @for (notification of notifications; track notification) {
+        <div class="notification-item">
+          {{ notification }}
+        </div>
+      }
+
+    </div>
+
+  }
+
+</div>

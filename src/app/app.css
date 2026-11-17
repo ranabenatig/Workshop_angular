@@ -1,0 +1,22 @@
+
+.page-container {
+  width: 100%;
+  max-width: 440px;
+  margin: 18px auto;
+  background: white;
+  font-family: Georgia, serif;
+}
+
+.section-title {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 15px 0 10px;
+  color: #263849;
+}
+
+@media (max-width: 460px) {
+  .page-container {
+    width: 95%;
+  }
+}

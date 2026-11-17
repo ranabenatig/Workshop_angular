@@ -1,0 +1,40 @@
+
+.notifications {
+  background: white;
+  padding: 12px 15px;
+  border-left: 3px solid #ffae24;
+  border-radius: 9px;
+  margin: 2px 0;
+}
+
+.notifications h3 {
+  color: #17416f;
+  font-size: 14px;
+}
+
+.notifications p {
+  font-size: 11px;
+}
+
+.notifications button {
+  background: #e9a126;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.notifications button:hover {
+  background: #cf8610;
+}
+
+.notification-item {
+  background: #fff8e8;
+  border-left: 3px solid #ffae24;
+  padding: 8px;
+  margin-top: 7px;
+  font-size: 11px;
+  border-radius: 4px;
+}

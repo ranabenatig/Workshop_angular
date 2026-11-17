@@ -1,0 +1,23 @@
+.friends {
+  background: white;
+  padding: 12px 15px;
+  border-left: 3px solid #32b879;
+  border-radius: 9px;
+  margin: 2px 0;
+}
+
+.friends h3 {
+  color: #17416f;
+  font-size: 14px;
+  margin: 5px 0 10px;
+}
+
+.friends ul {
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+.friends li {
+  font-size: 11px;
+  margin: 2px 0;
+}

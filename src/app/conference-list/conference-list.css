@@ -1,0 +1,112 @@
+
+.conference-container {
+  width: 100%;
+  margin: auto;
+  padding: 8px 0;
+  border-left: 2px solid #159b85;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.conference-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+}
+
+.conference-heading h2 {
+  display: block;
+  font-size: 14px;
+  color: #17416f;
+  margin: 0;
+}
+
+.conference-heading p {
+  font-size: 10px;
+  color: #8190a0;
+  margin: 3px 0;
+}
+
+.conference-icon {
+  background: #e2faf5;
+  border-radius: 50%;
+  padding: 9px;
+  font-size: 18px;
+}
+
+.search-input {
+  width: calc(100% - 30px);
+  margin: 8px 15px 12px;
+  padding: 9px;
+  box-sizing: border-box;
+  border: 1px solid #dce2e9;
+  border-radius: 7px;
+  font-size: 10px;
+}
+
+.conference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.conference-card {
+  background: #f7f9fc;
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 0;
+}
+
+.conference-card h3 {
+  color: #17416f;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  min-height: 30px;
+  margin-top: 2px;
+}
+
+.conference-card p {
+  font-size: 10px;
+  line-height: 1.4;
+  margin: 7px 0;
+  overflow-wrap: anywhere;
+}
+
+.conference-card button {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.available {
+  background: #168b43;
+}
+
+.limited {
+  background: #e78300;
+}
+
+.full {
+  background: #d62828;
+  cursor: not-allowed;
+}
+
+.empty-message {
+  text-align: center;
+  color: #d62828;
+  font-size: 12px;
+  padding: 15px;
+}
+
+@media (max-width: 360px) {
+  .conference-grid {
+    grid-template-columns: 1fr;
+  }
+}

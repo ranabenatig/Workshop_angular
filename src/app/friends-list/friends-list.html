@@ -1,0 +1,15 @@
+
+<div class="friends">
+  <h3>Ma liste d'amis</h3>
+
+  <ul>
+    @for (friend of friends; track friend) {
+      <li>
+        <span class="status"></span>
+        {{ friend }}
+      </li>
+    } @empty {
+      <li>Aucun ami pour le moment.</li>
+    }
+  </ul>
+</div>

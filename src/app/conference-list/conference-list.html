@@ -1,0 +1,85 @@
+
+<div class="conference-container">
+
+  <!-- Titre de la section -->
+  <div class="conference-heading">
+    <span class="conference-icon">🗓️</span>
+
+    <div>
+      <h2>Liste des conférences à venir</h2>
+      <p>Cliquez sur une conférence pour afficher ses détails.</p>
+    </div>
+  </div>
+
+  <!-- Barre de recherche -->
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Taper le titre de la conférence"
+    class="search-input"
+  />
+
+  <!-- Vérification de la liste -->
+  @if (filteredConferences.length > 0) {
+
+    <div class="conference-grid">
+
+      <!-- Parcours des conférences -->
+      @for (conf of filteredConferences; track conf.id) {
+
+        <div class="conference-card">
+
+          <!-- Titre en majuscules -->
+          <h3>{{ conf.title | uppercase }}</h3>
+
+          <p>{{ conf.description }}</p>
+
+          <!-- Date formatée -->
+          <p>
+            <strong>Date :</strong>
+            {{ conf.date | date:'dd/MM/yyyy' }}
+          </p>
+
+          <!-- Lieu -->
+          <p>
+            <strong>Lieu :</strong>
+            {{ conf.place }}
+          </p>
+
+          <!-- Nombre de places -->
+          <p>
+            <strong>Places restantes :</strong>
+            {{ getRemainingPlaces(conf) }}
+          </p>
+
+          <!-- Bouton dynamique -->
+          <button
+            [ngClass]="getButtonClass(conf)"
+            [disabled]="getRemainingPlaces(conf) === 0"
+            (click)="register(conf)"
+          >
+
+            @if (getRemainingPlaces(conf) === 0) {
+              Complet
+            } @else {
+              S'inscrire
+            }
+
+          </button>
+
+        </div>
+
+      }
+
+    </div>
+
+  } @else {
+
+    <!-- Message si aucune conférence -->
+    <p class="empty-message">
+      Aucune conférence trouvée.
+    </p>
+
+  }
+
+</div>
